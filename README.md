@@ -1,40 +1,59 @@
-# Astro Starter Kit: Minimal
+# Personal Webpage & CV - Luis A. Ruiz Arias
 
-```sh
-npm create astro@latest -- --template minimal
-```
+This project is a personal webpage and curriculum vitae for Luis A. Ruiz Arias, built with [Astro](https://astro.build/). It showcases professional experience, skills, education, and other relevant information in a modern and responsive design.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## ✨ Features
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- **Built with Astro:** Leverages Astro's component-based architecture and performance optimizations.
+- **Responsive Design:** Adapts to various screen sizes for optimal viewing on desktops, tablets, and mobile devices.
+- **Internationalization (i18n):** Supports multiple languages (English and Spanish).
+- **Reusable Components:** Modular design using Astro components for easy maintenance and updates.
+- **Tailwind CSS:** Styled with Tailwind CSS for rapid UI development.
+- **Parallax Effects:** Subtle parallax scrolling effects for enhanced visual appeal.
+- **Schema.org Integration:** Includes structured data for better SEO and accessibility.
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+Key directories and files in this project:
 
 ```text
 /
-├── public/
+├── public/                   # Static assets (images, fonts, etc.)
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/           # Reusable Astro components (Navigation, Hero, Card, etc.)
+│   ├── layouts/              # Base layout for pages
+│   ├── pages/                # Astro pages (e.g., index.astro)
+│   ├── styles/               # Global CSS and Tailwind configuration
+│   └── utils/                # Utility functions (e.g., translations)
+├── .github/workflows/      # GitHub Actions for CI/CD
+├── astro.config.mjs        # Astro configuration file
+├── package.json            # Project dependencies and scripts
+└── README.md               # This file
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🛠️ Tech Stack
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- **Framework:** [Astro](https://astro.build/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Deployment:** AWS S3 & CloudFront (via GitHub Actions)
+- **Version Control:** Git & GitHub
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 🧞 Available Scripts
 
-## 🧞 Commands
+In the project directory, you can run:
 
-All commands are run from the root of the project, from a terminal:
+| Command         | Action                                       |
+| :-------------- | :------------------------------------------- |
+| `npm install`   | Installs project dependencies.               |
+| `npm run dev`   | Starts the development server.               |
+| `npm run build` | Builds the site for production.              |
+| `npm run preview`| Previews the production build locally.       |
+| `npm run astro ...` | Runs Astro CLI commands directly.            |
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
+## 📄 License
+
+This project is for personal use. Please contact Luis A. Ruiz Arias for any inquiries regarding its content or code.
+
 | `npm install`             | Installs dependencies                            |
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
 | `npm run build`           | Build your production site to `./dist/`          |
