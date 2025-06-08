@@ -1,0 +1,26 @@
+---
+// No props needed for this component as it's a static footer
+---
+
+<footer class="text-center pt-8 mt-12 border-t border-gray-700">
+  <p class="text-gray-500">
+    &copy; <span id="currentYear"></span> Luis Alberto Ruiz Arias. <span
+      data-translate-key="footer.rights"
+      >Todos los derechos reservados.</span
+    >
+  </p>
+  <p
+    class="text-xs text-gray-600 mt-1"
+    data-translate-key="footer.design"
+  >
+    Diseñado con Tailwind CSS.
+  </p>
+</footer>
+
+<script>
+  // Set current year
+  const currentYearElement = document.getElementById("currentYear");
+  if (currentYearElement) {
+    currentYearElement.textContent = String(new Date().getFullYear());
+  }
+</script>

@@ -1,0 +1,54 @@
+---
+import SchemaOrgPerson from "./SchemaOrgPerson.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  author?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  twitterImage?: string;
+  lang?: string;
+}
+
+const {
+  title = "Luis Alberto Ruiz Arias - Director de TI | Experto en Tecnología LATAM",
+  description = "Portafolio profesional de Luis Alberto Ruiz Arias, Director de TI con más de 10 años de experiencia liderando proyectos tecnológicos y transformación digital en LATAM. Experto en software, arquitecturas modernas y gestión de equipos.",
+  keywords = "Luis Alberto Ruiz Arias, Director de TI, IT Director, Profesional de Tecnología, LATAM, Software Engineer, Desarrollo de Software, Transformación Digital, Liderazgo TI, Arquitectura de Software, Proyectos Tecnológicos, Portafolio TI",
+  author = "Luis Alberto Ruiz Arias",
+  canonicalUrl = "https://ruix.dev/",
+  ogImage = "https://ruix.dev/imagen-perfil-og.jpg",
+  twitterImage = "https://ruix.dev/imagen-perfil-twitter.jpg",
+  lang = "es",
+} = Astro.props;
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <meta name="description" content={description} />
+  <meta name="keywords" content={keywords} />
+  <meta name="author" content={author} />
+  <link rel="canonical" href={canonicalUrl} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:locale" content={lang === "es" ? "es_MX" : "en_US"} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={twitterImage} />
+  <meta name="robots" content="index, follow" />
+  <meta name="generator" content={Astro.generator} />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <SchemaOrgPerson />
+  <slot />
+</head>

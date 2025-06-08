@@ -1,0 +1,62 @@
+---
+// No props needed for this component as it's a standard sidebar with fixed navigation links
+---
+
+<div
+  id="sidebar"
+  class="fixed top-0 left-0 h-full w-64 bg-gray-800 shadow-lg p-6 z-40 md:hidden"
+  role="navigation"
+  aria-label="Main navigation menu"
+>
+  <button
+    id="close-sidebar-button"
+    aria-label="Close navigation menu"
+    data-translate-key="nav.close"
+    class="absolute top-16 right-4 text-gray-300 hover:text-purple-400"
+  >
+    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+  </button>
+  <ul class="mt-16 flex flex-col space-y-3">
+    <li>
+      <a
+        href="#summary"
+        class="nav-link block text-lg"
+        data-translate-key="nav.summary">{`<RESUMEN/>`}</a
+      >
+    </li>
+    <li>
+      <a
+        href="#experience"
+        class="nav-link block text-lg"
+        data-translate-key="nav.experience">{`<EXPERIENCIA/>`}</a
+      >
+    </li>
+    <li>
+      <a
+        href="#skills"
+        class="nav-link block text-lg"
+        data-translate-key="nav.skills">{`<HABILIDADES/>`}</a
+      >
+    </li>
+    <li>
+      <a
+        href="#education"
+        class="nav-link block text-lg"
+        data-translate-key="nav.education">{`<EDUCACIÓN/>`}</a
+      >
+    </li>
+    <li>
+      <a
+        href="#languages-softskills"
+        class="nav-link block text-lg"
+        data-translate-key="nav.languages_etc">{`<IDIOMAS_ETC/>`}</a
+      >
+    </li>
+  </ul>
+</div>

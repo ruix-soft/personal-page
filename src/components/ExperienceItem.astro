@@ -1,0 +1,46 @@
+---
+interface Props {
+  titleKey: string;
+  titleDefault: string;
+  company: string;
+  dateKey: string;
+  dateDefault: string;
+  descriptions: {
+    key: string;
+    default: string;
+  }[];
+}
+
+const { 
+  titleKey, 
+  titleDefault, 
+  company, 
+  dateKey, 
+  dateDefault, 
+  descriptions 
+} = Astro.props;
+---
+
+<article class="mb-10 pl-8 sm:pl-0 sm:relative sm:ml-8">
+  <div class="sm:absolute timeline-item"></div>
+  <div class="card p-6 rounded-lg shadow-lg sm:ml-10">
+    <h3
+      class="text-xl font-semibold text-white"
+      data-translate-key={titleKey}
+    >
+      {titleDefault}
+    </h3>
+    <p class="text-purple-300 mb-1">
+      {company} | <span data-translate-key={dateKey}>{dateDefault}</span>
+    </p>
+    <ul
+      class="list-disc list-inside text-gray-400 space-y-1 text-sm"
+    >
+      {descriptions.map(desc => (
+        <li data-translate-key={desc.key}>
+          {desc.default}
+        </li>
+      ))}
+    </ul>
+  </div>
+</article>

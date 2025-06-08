@@ -1,0 +1,88 @@
+---
+import { setLanguage } from "../utils/translations";
+---
+
+<script>
+  import { setLanguage } from "../utils/translations";
+
+  // Inicializar el idioma por defecto
+  document.addEventListener("DOMContentLoaded", () => {
+    // Obtener botones de idioma
+    const langEsButton = document.getElementById("lang-es");
+    const langEnButton = document.getElementById("lang-en");
+
+    // Configurar eventos para cambio de idioma
+    langEsButton?.addEventListener("click", () => {
+      setLanguage("es");
+      langEsButton?.classList.add("active");
+      langEnButton?.classList.remove("active");
+    });
+
+    langEnButton?.addEventListener("click", () => {
+      setLanguage("en");
+      langEnButton?.classList.add("active");
+      langEsButton?.classList.remove("active");
+    });
+
+    // Establecer idioma inicial
+    setLanguage("es");
+    langEsButton?.classList.add("active");
+  });
+
+  // Configuración del parallax
+  const parallaxFigures = document.querySelectorAll('[id^="parallax-fig"]');
+  window.addEventListener("scroll", () => {
+    let scrollY = window.scrollY;
+    parallaxFigures.forEach((figWrapper) => {
+      const htmlFigWrapper = figWrapper as HTMLElement;
+      const factor = parseFloat(
+        htmlFigWrapper?.dataset?.parallaxFactor || "0.1"
+      );
+      const translateY = scrollY * factor;
+      htmlFigWrapper.style.transform = `translateY(${translateY}px)`;
+    });
+  });
+
+  // Configuración del sidebar
+  const hamburgerButton = document.getElementById("hamburger-button");
+  const sidebar = document.getElementById("sidebar");
+  const sidebarOverlay = document.getElementById("sidebar-overlay");
+  const closeSidebarButton = document.getElementById("close-sidebar-button");
+  const sidebarLinks = sidebar?.querySelectorAll("a");
+
+  function openSidebar() {
+    sidebar?.classList.add("open");
+    sidebarOverlay?.classList.add("open");
+  }
+
+  function closeSidebar() {
+    sidebar?.classList.remove("open");
+    sidebarOverlay?.classList.remove("open");
+  }
+
+  hamburgerButton?.addEventListener("click", (event) => {
+    event.stopPropagation();
+    openSidebar();
+  });
+
+  closeSidebarButton?.addEventListener("click", (event) => {
+    event.stopPropagation();
+    closeSidebar();
+  });
+
+  sidebarLinks?.forEach((link) => {
+    link.addEventListener("click", () => {
+      closeSidebar();
+    });
+  });
+
+  sidebarOverlay?.addEventListener("click", () => {
+    closeSidebar();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && sidebar?.classList.contains("open")) {
+      closeSidebar();
+    }
+  });
+</script>

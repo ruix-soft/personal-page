@@ -1,16 +1,386 @@
 ---
-
+import "../styles/global.css";
+import ExperienceItem from "../components/ExperienceItem.astro";
+import EducationItem from "../components/EducationItem.astro";
+import SkillsCategory from "../components/SkillsCategory.astro";
+import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import ParallaxBackground from "../components/ParallaxBackground.astro";
+import Navigation from "../components/Navigation.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Section from "../components/Section.astro";
+import Card from "../components/Card.astro";
+import ItemList from "../components/ItemList.astro";
+import TranslationScript from "../components/TranslationScript.astro";
+import Head from "../components/Head.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="es">
+  <Head />
+  <body class="antialiased">
+    <ParallaxBackground />
+    <div id="sidebar-overlay" class="md:hidden"></div>
+    <Navigation />
+    <Sidebar />
+    <main>
+      <Hero
+        name="Luis Alberto Ruiz Arias"
+        email="luisalbertoruiz.geek@gmail.com"
+        linkedinUrl="https://www.linkedin.com/in/luis-alberto-ruiz-arias/"
+        location="Cuautitlán Izcalli, MEX"
+      />
+      <div class="container mx-auto max-w-5xl px-4 pb-8 sm:pb-12 relative z-10">
+        <Section id="summary" paddingTop={true} aria-labelledby="summary-title">
+          <SectionTitle
+            id="summary-title"
+            translateKey="title.summary"
+            defaultText="Resumen Profesional"
+          />
+          <p
+            class="text-lg text-gray-300 leading-relaxed"
+            data-translate-key="summary.paragraph"
+          >
+            Profesional de TI experimentado con más de 10 años liderando equipos
+            multidisciplinarios y entregando proyectos tecnológicos en LATAM.
+            Experto en implementar y optimizar soluciones de software escalables
+            con arquitecturas modernas y mejores prácticas de ingeniería (DDD,
+            TDD, CI/CD). Capacidad comprobada para gestionar iniciativas a gran
+            escala, impulsar la transformación digital y alinear la tecnología
+            con los objetivos comerciales. Fuerte enfoque en la mejora continua
+            y el liderazgo ético.
+          </p>
+        </Section>
+        <Section id="experience" aria-labelledby="experience-title">
+          <SectionTitle
+            id="experience-title"
+            translateKey="title.experience"
+            defaultText="Experiencia Profesional"
+            marginBottom="mb-8"
+          />
+          <div class="relative">
+            <div class="timeline-line hidden sm:block"></div>
+            <ExperienceItem
+              titleKey="exp1.title"
+              titleDefault="Director of IT"
+              company="Mail Boxes Etc., Mexico"
+              dateKey="exp1.date"
+              dateDefault="Oct 2021 – Presente"
+              descriptions={[
+                {
+                  key: "exp1.desc1",
+                  default:
+                    "Liderando la implementación tecnológica en países de LATAM.",
+                },
+                {
+                  key: "exp1.desc2",
+                  default:
+                    "Gestionando equipos tecnológicos y proyectos de transformación digital a gran escala.",
+                },
+                {
+                  key: "exp1.desc3",
+                  default:
+                    "Definiendo y ejecutando estrategias tecnológicas alineadas con los objetivos corporativos.",
+                },
+              ]}
+            />
+            <ExperienceItem
+              titleKey="exp2.title"
+              titleDefault="IT Manager"
+              company="Mail Boxes Etc., Mexico"
+              dateKey="exp2.date"
+              dateDefault="Oct 2020 – Oct 2021"
+              descriptions={[
+                {
+                  key: "exp2.desc1",
+                  default:
+                    "Supervisé las operaciones de TI y mejoré los procesos internos.",
+                },
+                {
+                  key: "exp2.desc2",
+                  default:
+                    "Lideré la adopción de nuevas tecnologías y mejores prácticas organizacionales.",
+                },
+              ]}
+            />
+            <ExperienceItem
+              titleKey="exp3.title"
+              titleDefault="Software Engineer"
+              company="PriceTravel Holding, CDMX, Mexico"
+              dateKey="exp3.date"
+              dateDefault="Ago 2019 – Oct 2020"
+              descriptions={[
+                {
+                  key: "exp3.desc1",
+                  default:
+                    "Desarrollé aplicaciones SPA utilizando arquitectura de microfrontends.",
+                },
+                {
+                  key: "exp3.desc2",
+                  default: "Refactoricé y optimicé componentes web.",
+                },
+                {
+                  key: "exp3.desc3",
+                  default:
+                    "Implementé pruebas unitarias y principios de diseño atómico.",
+                },
+              ]}
+            />
+            <ExperienceItem
+              titleKey="exp4.title"
+              titleDefault="Development Lead"
+              company="Sellcom Solutions, Huixquilucan, Mexico"
+              dateKey="exp4.date"
+              dateDefault="Nov 2018 – Ago 2019"
+              descriptions={[
+                {
+                  key: "exp4.desc1",
+                  default:
+                    "Diseñé la arquitectura de software y estimé los plazos de entrega.",
+                },
+                {
+                  key: "exp4.desc2",
+                  default:
+                    "Implementé pipelines de CI/CD y gestioné repositorios.",
+                },
+                {
+                  key: "exp4.desc3",
+                  default:
+                    "Seleccioné e integré tecnologías clave incluyendo AWS, Azure, GCP.",
+                },
+              ]}
+            />
+            <ExperienceItem
+              titleKey="exp5.title"
+              titleDefault="Development Lead"
+              company="Grupo Sports World, CDMX, Mexico"
+              dateKey="exp5.date"
+              dateDefault="Nov 2017 – Nov 2018"
+              descriptions={[
+                {
+                  key: "exp5.desc1",
+                  default: "Desarrollé aplicaciones web usando PHP y Laravel.",
+                },
+                {
+                  key: "exp5.desc2",
+                  default:
+                    "Implementé servicios RESTful para backends móviles.",
+                },
+                {
+                  key: "exp5.desc3",
+                  default:
+                    "Integré soluciones de hardware (biometría, escáneres QR).",
+                },
+              ]}
+            />
+            <ExperienceItem
+              titleKey="exp6.title"
+              titleDefault="Full Stack Developer"
+              company="Grupo Sports World, CDMX, Mexico"
+              dateKey="exp6.date"
+              dateDefault="Nov 2016 – Nov 2017"
+              descriptions={[
+                {
+                  key: "exp6.desc1",
+                  default:
+                    "Desarrollé soluciones frontend/backend personalizadas.",
+                },
+                {
+                  key: "exp6.desc2",
+                  default: "Gestioné servidores AWS y optimicé bases de datos.",
+                },
+              ]}
+            />
+            <ExperienceItem
+              titleKey="exp7.title"
+              titleDefault="Full Stack Developer"
+              company="Avantika, Huixquilucan, Mexico"
+              dateKey="exp7.date"
+              dateDefault="Jul 2015 – Jun 2016"
+              descriptions={[
+                {
+                  key: "exp7.desc1",
+                  default:
+                    "Construí sistemas de software personalizados, gestioné bases de datos, manejé facturación electrónica.",
+                },
+              ]}
+            />
+            <ExperienceItem
+              titleKey="exp8.title"
+              titleDefault="Software Developer"
+              company="Secretaría de Ciencia, Tecnología e Innovación, Mexico"
+              dateKey="exp8.date"
+              dateDefault="Jun 2014 – Jun 2015"
+              descriptions={[
+                {
+                  key: "exp8.desc1",
+                  default:
+                    "Desarrollé módulos internos y portales web utilizando Drupal y Symfony.",
+                },
+              ]}
+            />
+          </div>
+        </Section>
+        <Section id="skills" aria-labelledby="skills-title">
+          <SectionTitle
+            id="skills-title"
+            translateKey="title.skills"
+            defaultText="Habilidades Técnicas"
+          />
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <SkillsCategory
+              categoryKey="skills.cat_languages"
+              categoryDefault="Lenguajes"
+              skills={["JavaScript", "TypeScript", "Java", "PHP", "C#"]}
+            />
+            <SkillsCategory
+              categoryKey="skills.cat_frameworks"
+              categoryDefault="Frameworks"
+              skills={[
+                "React",
+                "Astro",
+                "Next.js",
+                "Laravel",
+                "Spring",
+                ".NET",
+                "SAM",
+              ]}
+            />
+            <SkillsCategory
+              categoryKey="skills.cat_databases"
+              categoryDefault="Bases de Datos"
+              skills={[
+                "MySQL",
+                "PostgreSQL",
+                "SQL Server",
+                "MongoDB",
+                "Redis",
+                "Firebase",
+              ]}
+            />
+            <SkillsCategory
+              categoryKey="skills.cat_webdev"
+              categoryDefault="Desarrollo Web"
+              skills={["HTML5", "CSS3", "Sass", "Tailwind", "Redux", "Node.js"]}
+            />
+            <SkillsCategory
+              categoryKey="skills.cat_devops"
+              categoryDefault="DevOps"
+              skills={[
+                "Git",
+                "GitLab",
+                "Docker",
+                "Kubernetes",
+                "CI/CD",
+                "AWS",
+                "Azure",
+                "GCP",
+              ]}
+            />
+            <SkillsCategory
+              categoryKey="skills.cat_tools"
+              categoryDefault="Herramientas"
+              skills={[
+                "Vite",
+                "Webpack",
+                "SWC",
+                "esbuild",
+                "Yarn",
+                "npm",
+                "JWT",
+                "StoryBook",
+                "Jest",
+                "Playwright",
+              ]}
+            />
+            <SkillsCategory
+              categoryKey="skills.cat_architectures"
+              categoryDefault="Arquitecturas"
+              skills={["Hexagonal", "SOLID", "MVC", "REST", "Microfrontends"]}
+            />
+          </div>
+        </Section>
+        <Section id="education" aria-labelledby="education-title">
+          <SectionTitle
+            id="education-title"
+            translateKey="title.education"
+            defaultText="Educación y Certificaciones"
+          />
+          <div class="space-y-6">
+            <EducationItem
+              degreeKey="edu1.degree"
+              degreeDefault="B.S. in Information Science (Incompleto)"
+              institutionKey="edu1.institution"
+              institutionDefault="Instituto Leonardo Bravo"
+              dateKey="edu1.date"
+              dateDefault="2011 – 2015"
+            />
+            <EducationItem
+              degreeKey="edu2.degree"
+              degreeDefault="Certificaciones en HTML5, CSS3, PostgreSQL"
+              institutionKey="edu2.institution"
+              institutionDefault="Open Intelligence"
+              dateKey="edu2.date"
+              dateDefault="2014"
+            />
+            <EducationItem
+              degreeKey="edu3.degree"
+              degreeDefault="Certificación en Arquitectura Hexagonal"
+              institutionKey="edu3.institution"
+              institutionDefault="Codely"
+              dateKey="edu3.date"
+              dateDefault="2023 – 2024"
+            />
+          </div>
+        </Section>
+        <Section
+          id="languages-softskills"
+          aria-labelledby="languages-softskills-title"
+          paddingTop={true}
+        >
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <SectionTitle
+                id="languages-title"
+                translateKey="title.languages"
+                defaultText="Idiomas"
+              />
+              <Card>
+                <ItemList
+                  items={[
+                    { key: "lang.spanish", default: "Español: Nativo" },
+                    { key: "lang.english", default: "Inglés: Intermedio" },
+                  ]}
+                />
+              </Card>
+            </div>
+            <div>
+              <SectionTitle
+                id="softskills-title"
+                translateKey="title.softskills"
+                defaultText="Habilidades Blandas"
+              />
+              <Card>
+                <ItemList
+                  items={[
+                    {
+                      key: "softskill1",
+                      default: "Liderazgo y Gestión de Equipos",
+                    },
+                    { key: "softskill2", default: "Pensamiento Estratégico" },
+                    { key: "softskill3", default: "Comunicación Efectiva" },
+                    { key: "softskill4", default: "Resolución de Problemas" },
+                    { key: "softskill5", default: "Adaptabilidad" },
+                    { key: "softskill6", default: "Proactividad" },
+                  ]}
+                />
+              </Card>
+            </div>
+          </div>
+        </Section>
+        <Footer />
+      </div>
+    </main>
+    <TranslationScript />
+  </body>
 </html>

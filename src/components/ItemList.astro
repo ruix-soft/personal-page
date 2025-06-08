@@ -1,0 +1,21 @@
+---
+interface ListItem {
+  key: string;
+  default: string;
+}
+
+interface Props {
+  items: ListItem[];
+  classes?: string;
+}
+
+const { items, classes = "list-disc list-inside text-gray-300 space-y-1" } = Astro.props;
+---
+
+<ul class={classes}>
+  {
+    items.map((item) => (
+      <li data-translate-key={item.key}>{item.default}</li>
+    ))
+  }
+</ul>

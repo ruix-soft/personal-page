@@ -1,0 +1,23 @@
+---
+interface Props {
+  categoryKey: string;
+  categoryDefault: string;
+  skills: string[];
+}
+
+const { categoryKey, categoryDefault, skills } = Astro.props;
+---
+
+<div>
+  <h3
+    class="text-lg font-semibold text-white mb-2"
+    data-translate-key={categoryKey}
+  >
+    {categoryDefault}
+  </h3>
+  <div class="flex flex-wrap gap-2">
+    {skills.map((skill) => (
+      <span class="tag text-sm py-1 px-3 rounded-full">{skill}</span>
+    ))}
+  </div>
+</div>

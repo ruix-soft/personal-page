@@ -1,0 +1,23 @@
+---
+interface Props {
+  id: string;
+  translateKey: string;
+  defaultText: string;
+  marginBottom?: string;
+}
+
+const { 
+  id, 
+  translateKey, 
+  defaultText,
+  marginBottom = "mb-6" // Default margin bottom
+} = Astro.props;
+---
+
+<h2
+  id={id}
+  class={`text-2xl sm:text-3xl font-semibold section-title ${marginBottom} pb-2 border-b border-gray-700`}
+  data-translate-key={translateKey}
+>
+  {defaultText}
+</h2>

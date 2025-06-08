@@ -1,0 +1,79 @@
+---
+import LanguageToggle from "./LanguageToggle.astro";
+
+interface Props {
+  name?: string;
+}
+
+const { name = "Luis A. Ruiz Arias" } = Astro.props;
+---
+
+<nav
+  class="fixed top-0 left-0 right-0 z-50 bg-gray-900 bg-opacity-80 backdrop-blur-md shadow-lg"
+>
+  <div class="container mx-auto max-w-5xl px-4">
+    <div class="flex justify-between items-center py-3">
+      <div class="md:hidden">
+        <button
+          id="hamburger-button"
+          aria-label="Abrir menú de navegación"
+          class="text-gray-300 hover:text-purple-400 focus:outline-none focus:text-purple-400"
+        >
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="hidden md:block text-sm text-purple-400">
+        {name}
+      </div>
+
+      <ul
+        class="hidden md:flex flex-wrap justify-center items-center space-x-1 sm:space-x-2"
+      >
+        <li>
+          <a href="#summary" class="nav-link" data-translate-key="nav.summary"
+            >{`<RESUMEN/>`}</a
+          >
+        </li>
+        <li>
+          <a
+            href="#experience"
+            class="nav-link"
+            data-translate-key="nav.experience">{`<EXPERIENCIA/>`}</a
+          >
+        </li>
+        <li>
+          <a href="#skills" class="nav-link" data-translate-key="nav.skills"
+            >{`<HABILIDADES/>`}</a
+          >
+        </li>
+        <li>
+          <a
+            href="#education"
+            class="nav-link"
+            data-translate-key="nav.education">{`<EDUCACIÓN/>`}</a
+          >
+        </li>
+        <li>
+          <a
+            href="#languages-softskills"
+            class="nav-link"
+            data-translate-key="nav.languages_etc">{`<IDIOMAS_ETC/>`}</a
+          >
+        </li>
+      </ul>
+      <LanguageToggle />
+    </div>
+  </div>
+</nav>

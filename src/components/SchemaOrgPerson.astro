@@ -1,0 +1,95 @@
+---
+interface Props {
+  name?: string;
+  url?: string;
+  image?: string;
+  jobTitle?: string;
+  organization?: string;
+  nationality?: string;
+  gender?: string;
+  description?: string;
+  email?: string;
+  linkedinUrl?: string;
+  location?: {
+    locality?: string;
+    region?: string;
+    country?: string;
+  };
+  education?: {
+    name: string;
+  }[];
+  skills?: string[];
+}
+
+const {
+  name = "Luis Alberto Ruiz Arias",
+  url = "https://ruix.dev/",
+  image = "https://ruix.dev/imagen-perfil-schema.jpg",
+  jobTitle = "Director de TI",
+  organization = "Mail Boxes Etc.",
+  nationality = "Mexicana",
+  gender = "male",
+  description = "Director de TI con más de 10 años de experiencia liderando equipos multidisciplinarios y entregando proyectos tecnológicos en LATAM. Experto en transformación digital y arquitecturas modernas.",
+  email = "luisalbertoruiz.geek@gmail.com",
+  linkedinUrl = "https://www.linkedin.com/in/luis-alberto-ruiz-arias/",
+  location = {
+    locality: "Cuautitlán Izcalli",
+    region: "MEX",
+    country: "MX"
+  },
+  education = [
+    {
+      name: "Instituto Leonardo Bravo"
+    }
+  ],
+  skills = [
+    "Desarrollo de Software",
+    "Arquitectura de Software",
+    "Gestión de Proyectos TI",
+    "Liderazgo de Equipos",
+    "Transformación Digital",
+    "CI/CD",
+    "Cloud Computing (AWS, Azure, GCP)",
+    "Microfrontends",
+    "PHP",
+    "Java",
+    "JavaScript"
+  ]
+} = Astro.props;
+---
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{name}",
+    "url": "{url}",
+    "image": "{image}",
+    "jobTitle": "{jobTitle}",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "{organization}"
+    },
+    "nationality": "{nationality}",
+    "gender": "{gender}",
+    "description": "{description}",
+    "knowsAbout": {JSON.stringify(skills)},
+    "email": "mailto:{email}",
+    "sameAs": [
+      "{linkedinUrl}"
+      // Puedes añadir otras URLs de perfiles sociales si las tienes
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "{location.locality}",
+      "addressRegion": "{location.region}", // Estado de México
+      "addressCountry": "{location.country}"
+    },
+    "alumniOf": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "{education[0].name}"
+      }
+    ]
+  }
+</script>

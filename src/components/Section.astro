@@ -1,0 +1,25 @@
+---
+interface Props {
+  id: string;
+  ariaLabelledby?: string;
+  classes?: string;
+  paddingTop?: boolean;
+}
+
+const {
+  id,
+  ariaLabelledby = `${id}-title`,
+  classes = "mb-12",
+  paddingTop = false,
+} = Astro.props;
+
+const paddingClass = paddingTop ? "pt-8" : "";
+---
+
+<section
+  id={id}
+  class={`${classes} ${paddingClass}`}
+  aria-labelledby={ariaLabelledby}
+>
+  <slot />
+</section>
