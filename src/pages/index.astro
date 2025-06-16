@@ -12,6 +12,7 @@ import Sidebar from "../components/Sidebar.astro";
 import Section from "../components/Section.astro";
 import Card from "../components/Card.astro";
 import ItemList from "../components/ItemList.astro";
+import ProjectItem from "../components/ProjectItem.astro";
 import TranslationScript from "../components/TranslationScript.astro";
 import Head from "../components/Head.astro";
 ---
@@ -390,6 +391,55 @@ import Head from "../components/Head.astro";
               </Card>
             </div>
           </div>
+        </Section>
+        <Section id="featured-projects" aria-labelledby="featured-projects-title" paddingTop={true}>
+          <SectionTitle
+            id="featured-projects-title"
+            translateKey="title.featuredProjects"
+            defaultText="Proyectos Destacados"
+            marginBottom="mb-8"
+          />
+          <ProjectItem
+            problemKey="project1.problem"
+            problemDefault="Desafío: Optimizar la plataforma de e-commerce para mejorar la experiencia de usuario y aumentar las conversiones en un mercado altamente competitivo."
+            roleKey="project1.role"
+            roleDefault="Lideré el rediseño de la interfaz de usuario (UI) y la experiencia de usuario (UX), coordinando un equipo de 3 diseñadores y 5 desarrolladores frontend. Definí la nueva arquitectura de componentes y supervisé la implementación."
+            technologiesKey="project.technologies"
+            technologiesDefault="Las Tecnologías"
+            technologies={[
+              { key: 'tech.react', default: 'React' },
+              { key: 'tech.nextjs', default: 'Next.js' },
+              { key: 'tech.tailwind', default: 'Tailwind CSS' },
+              { key: 'tech.node', default: 'Node.js' },
+              { key: 'tech.aws', default: 'AWS (S3, CloudFront)' },
+            ]}
+            resultKey="project1.result"
+            resultDefault="Resultado: Se incrementó la tasa de conversión en un 25%, se redujo la tasa de rebote en un 40% y se mejoró la satisfacción del cliente en un 30% según encuestas post-implementación. El nuevo diseño fue lanzado 2 semanas antes de lo previsto."
+            visualUrl="/images/project-link-placeholder.png"
+            visualAltKey="project1.visualAlt"
+            visualAltDefault="Visual del Proyecto 1"
+          />
+
+          <ProjectItem
+            problemKey="project2.problem"
+            problemDefault="Problema: Necesidad de desarrollar un sistema de gestión de inventario escalable y en tiempo real para una cadena de suministro con múltiples almacenes, reemplazando un sistema legado obsoleto."
+            roleKey="project2.role"
+            roleDefault="Diseñé la arquitectura de microservicios para el nuevo sistema de inventario y desarrollé los servicios core utilizando Java y Spring Boot. Implementé la base de datos NoSQL y configuré el pipeline de CI/CD."
+            technologiesKey="project.technologies"
+            technologiesDefault="Las Tecnologías"
+            technologies={[
+              { key: 'tech.java', default: 'Java' },
+              { key: 'tech.springboot', default: 'Spring Boot' },
+              { key: 'tech.kubernetes', default: 'Kubernetes' },
+              { key: 'tech.mongodb', default: 'MongoDB' },
+              { key: 'tech.kafka', default: 'Apache Kafka' },
+            ]}
+            resultKey="project2.result"
+            resultDefault="Logro: El nuevo sistema procesó un 50% más de transacciones diarias, redujo los errores de inventario en un 95% y proporcionó visibilidad en tiempo real, mejorando la eficiencia operativa en un 35%. Entregado a tiempo y dentro del presupuesto."
+            visualUrl="https://example.com/proyecto-en-vivo"
+            visualAltKey="project2.visualAlt"
+            visualAltDefault="Enlace al Proyecto 2 en vivo"
+          />
         </Section>
         <Footer />
       </div>
