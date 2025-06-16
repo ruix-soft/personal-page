@@ -154,3 +154,10 @@ html {
     opacity: 1;
     visibility: visible;
   }
+
+/* Styles for ProjectItem component gradient text */
+.text-transparent.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
