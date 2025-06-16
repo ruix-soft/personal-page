@@ -10,7 +10,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "nav.education": "<EDUCACIÓN/>",
     "nav.languages_etc": "<IDIOMAS_ETC/>",
     "hero.greeting": "Hola, mi nombre es",
-    "hero.tagline": "Construyo soluciones tecnológicas.",
+    "hero.tagline": "Convierto desafíos de negocio en soluciones tecnológicas escalables.",
     "hero.description":
       "Soy un Director de TI y profesional de la tecnología especializado en liderar equipos y entregar proyectos innovadores en LATAM. Actualmente, estoy enfocado en impulsar la transformación digital y optimizar soluciones escalables en Mail Boxes Etc.",
     "contact.linkedin": "LinkedIn",
