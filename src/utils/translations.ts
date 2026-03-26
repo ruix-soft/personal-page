@@ -12,7 +12,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "hero.greeting": "Hola, mi nombre es",
     "hero.tagline": "Convierto desafíos de negocio en soluciones tecnológicas escalables.",
     "hero.description":
-      "Soy un Director de TI y profesional de la tecnología especializado en liderar equipos y entregar proyectos innovadores en LATAM. Actualmente, estoy enfocado en impulsar la transformación digital y optimizar soluciones escalables en Mail Boxes Etc.",
+      "Soy un Director de TI y líder técnico global especializado en dirigir equipos y entregar proyectos innovadores a nivel internacional. Actualmente, como Team Developer Leader en Fortidia, estoy enfocado en impulsar la transformación digital y optimizar soluciones tecnológicas altamente escalables.",
     "contact.linkedin": "LinkedIn",
     "contact.location": "Cuautitlán Izcalli, MEX",
     "title.summary": "Resumen Profesional",
