@@ -62,6 +62,27 @@ import Head from "../components/Head.astro";
           <div class="relative">
             <div class="timeline-line hidden sm:block"></div>
             <ExperienceItem
+              titleKey="exp0.title"
+              titleDefault="Team Developer Leader - Global Development Team"
+              company="Fortidia"
+              dateKey="exp0.date"
+              dateDefault="Enero 2026 – Presente"
+              descriptions={[
+                {
+                  key: "exp0.desc1",
+                  default: "Liderazgo técnico del equipo de desarrollo global, reportando directamente a la Dirección de Desarrollo de Software.",
+                },
+                {
+                  key: "exp0.desc2",
+                  default: "Dirección y ejecución de la arquitectura para la integración del sistema \"Rocket\" (México) con el ecosistema global \"HUB\" de Fortidia.",
+                },
+                {
+                  key: "exp0.desc3",
+                  default: "[Placeholder para tecnologías/herramientas]",
+                },
+              ]}
+            />
+            <ExperienceItem
               titleKey="exp1.title"
               titleDefault="Director of IT"
               company="Mail Boxes Etc., Mexico"

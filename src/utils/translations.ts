@@ -19,6 +19,11 @@ export const translations: Record<Language, Record<string, string>> = {
     "summary.paragraph":
       "Profesional de TI experimentado con más de 10 años liderando equipos multidisciplinarios y entregando proyectos tecnológicos en LATAM. Experto en implementar y optimizar soluciones de software escalables con arquitecturas modernas y mejores prácticas de ingeniería (DDD, TDD, CI/CD). Capacidad comprobada para gestionar iniciativas a gran escala, impulsar la transformación digital y alinear la tecnología con los objetivos comerciales. Fuerte enfoque en la mejora continua y el liderazgo ético.",
     "title.experience": "Experiencia Profesional",
+    "exp0.title": "Team Developer Leader - Global Development Team",
+    "exp0.date": "Enero 2026 – Presente",
+    "exp0.desc1": "Liderazgo técnico del equipo de desarrollo global, reportando directamente a la Dirección de Desarrollo de Software.",
+    "exp0.desc2": "Dirección y ejecución de la arquitectura para la integración del sistema \"Rocket\" (México) con el ecosistema global \"HUB\" de Fortidia.",
+    "exp0.desc3": "[Placeholder para tecnologías/herramientas]",
     "exp1.title": "Director de TI",
     "exp1.date": "Oct 2021 – Presente",
     "exp1.desc1": "Liderando la implementación tecnológica en países de LATAM.",
@@ -146,6 +151,11 @@ export const translations: Record<Language, Record<string, string>> = {
     "summary.paragraph":
       "Experienced IT professional with over 10 years leading multidisciplinary teams and delivering technology projects across LATAM. Expert in implementing and optimizing scalable software solutions with modern architectures and best engineering practices (DDD, TDD, CI/CD). Proven ability to manage large-scale initiatives, drive digital transformation, and align technology with business goals. Strong focus on continuous improvement and ethical leadership.",
     "title.experience": "Professional Experience",
+    "exp0.title": "Team Developer Leader - Global Development Team",
+    "exp0.date": "Jan 2026 - Present",
+    "exp0.desc1": "Technical leadership of the global development team, reporting directly to the Software Development Directorate.",
+    "exp0.desc2": "Direction and execution of the architecture for the integration of the \"Rocket\" system (Mexico) with Fortidia's global \"HUB\" ecosystem.",
+    "exp0.desc3": "[Placeholder for technologies/tools]",
     "exp1.title": "Director of IT",
     "exp1.date": "Oct 2021 - Present",
     "exp1.desc1": "Leading technology implementation across LATAM countries.",
