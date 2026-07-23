@@ -433,45 +433,47 @@ import Head from "../components/Head.astro";
             marginBottom="mb-8"
           />
           <ProjectItem
+            titleKey="project1.title"
+            titleDefault="Falcon – Sistema Agnóstico de Logística Cross-Border"
             problemKey="project1.problem"
-            problemDefault="Desafío: Optimizar la plataforma de e-commerce para mejorar la experiencia de usuario y aumentar las conversiones en un mercado altamente competitivo."
+            problemDefault="Falta de trazabilidad, automatización y escalabilidad en la gestión de casilleros internacionales (PO Box), recepción de paquetería en frontera y despacho de envíos transfronterizos con múltiples transportistas."
             roleKey="project1.role"
-            roleDefault="Lideré el rediseño de la interfaz de usuario (UI) y la experiencia de usuario (UX), coordinando un equipo de 3 diseñadores y 5 desarrolladores frontend. Definí la nueva arquitectura de componentes y supervisé la implementación."
+            roleDefault="Diseñé la arquitectura e implementé la solución backend/database desde cero como consultor e ingeniero principal, definiendo los flujos de datos, integración de transportistas y contratos API."
             technologiesKey="project.technologies"
             technologiesDefault="Las Tecnologías"
             technologies={[
-              { key: 'tech.react', default: 'React' },
-              { key: 'tech.nextjs', default: 'Next.js' },
-              { key: 'tech.tailwind', default: 'Tailwind CSS' },
-              { key: 'tech.node', default: 'Node.js' },
-              { key: 'tech.aws', default: 'AWS (S3, CloudFront)' },
+              { key: 'tech.node_ts', default: 'Node.js / TypeScript' },
+              { key: 'tech.postgresql_multi', default: 'PostgreSQL (Modelado de datos multitenant)' },
+              { key: 'tech.aws_serverless', default: 'AWS (Servicios Serverless / Cloud Functions)' },
+              { key: 'tech.api_carriers', default: 'Integración con APIs de transportistas (Shipping Carriers REST/SOAP)' },
             ]}
             resultKey="project1.result"
-            resultDefault="Resultado: Se incrementó la tasa de conversión en un 25%, se redujo la tasa de rebote en un 40% y se mejoró la satisfacción del cliente en un 30% según encuestas post-implementación. El nuevo diseño fue lanzado 2 semanas antes de lo previsto."
+            resultDefault="Se construyó un core logístico agnóstico capaz de procesar inventario en almacén, generación automatizada de guías, cálculo de tarifas de importación y rastreo en tiempo real, reduciendo la fricción operativa y errores manuales de registro."
             visualUrl="/images/project-link-placeholder.png"
             visualAltKey="project1.visualAlt"
-            visualAltDefault="Visual del Proyecto 1"
+            visualAltDefault="Visual del Proyecto Falcon"
           />
 
           <ProjectItem
+            titleKey="project2.title"
+            titleDefault="Rocket – Middleware Core & Reingeniería de Plataforma Logística"
             problemKey="project2.problem"
-            problemDefault="Problema: Necesidad de desarrollar un sistema de gestión de inventario escalable y en tiempo real para una cadena de suministro con múltiples almacenes, reemplazando un sistema legado obsoleto."
+            problemDefault="Sistemas legados acoplados con alto costo de mantenimiento, baja escalabilidad y cuellos de botella en el procesamiento e integración de órdenes operativas masivas a nivel regional."
             roleKey="project2.role"
-            roleDefault="Diseñé la arquitectura de microservicios para el nuevo sistema de inventario y desarrollé los servicios core utilizando Java y Spring Boot. Implementé la base de datos NoSQL y configuré el pipeline de CI/CD."
+            roleDefault="Lideré la dirección de arquitectura y modernización del software core. Diseñé e implementé la transición hacia una arquitectura desacoplada y orientada a eventos para orquestar la operación logística end-to-end."
             technologiesKey="project.technologies"
             technologiesDefault="Las Tecnologías"
             technologies={[
-              { key: 'tech.java', default: 'Java' },
-              { key: 'tech.springboot', default: 'Spring Boot' },
-              { key: 'tech.kubernetes', default: 'Kubernetes' },
-              { key: 'tech.mongodb', default: 'MongoDB' },
-              { key: 'tech.kafka', default: 'Apache Kafka' },
+              { key: 'tech.node_go_ts', default: 'Node.js / Go / TypeScript' },
+              { key: 'tech.event_driven', default: 'Arquitectura Orientada a Eventos (Microservicios / Message Queue)' },
+              { key: 'tech.aws_infrastructure', default: 'Amazon Web Services (AWS Infrastructure & Cloud-Native)' },
+              { key: 'tech.databases_rel_nosql', default: 'Bases de Datos Relacionales y NoSQL' },
             ]}
             resultKey="project2.result"
-            resultDefault="Logro: El nuevo sistema procesó un 50% más de transacciones diarias, redujo los errores de inventario en un 95% y proporcionó visibilidad en tiempo real, mejorando la eficiencia operativa en un 35%. Entregado a tiempo y dentro del presupuesto."
-            visualUrl="https://example.com/proyecto-en-vivo"
+            resultDefault="Se logró la modernización completa de la infraestructura crítica de la plataforma, optimizando los tiempos de respuesta del API, mejorando la disponibilidad del sistema frente a picos de tráfico y facilitando la integración transparente con múltiples integradores y clientes."
+            visualUrl="/images/project-link-placeholder.png"
             visualAltKey="project2.visualAlt"
-            visualAltDefault="Enlace al Proyecto 2 en vivo"
+            visualAltDefault="Enlace al Proyecto Rocket"
           />
         </Section>
         <Footer />
