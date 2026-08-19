@@ -1,0 +1,32 @@
+---
+import Card from "./Card.astro";
+
+interface Props {
+  titleKey: string;
+  titleDefault: string;
+  descKey: string;
+  descDefault: string;
+  tags: string[];
+}
+
+const { titleKey, titleDefault, descKey, descDefault, tags } = Astro.props;
+---
+
+<div class="mb-8 p-0.5 rounded-lg bg-gradient-to-tr from-purple-500 via-indigo-500 to-pink-500 shadow-lg">
+  <Card classes="h-full">
+    <h3
+      class="text-xl font-bold text-gray-100 mb-3"
+      data-translate-key={titleKey}
+    >
+      {titleDefault}
+    </h3>
+    <p class="text-gray-400 mb-4" data-translate-key={descKey}>
+      {descDefault}
+    </p>
+    <div class="flex flex-wrap gap-2">
+      {tags.map((tag) => (
+        <span class="tag">{tag}</span>
+      ))}
+    </div>
+  </Card>
+</div>

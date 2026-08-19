@@ -1,0 +1,162 @@
+---
+import "../../styles/global.css";
+import Head from "../../components/Head.astro";
+import Navigation from "../../components/Navigation.astro";
+import Sidebar from "../../components/Sidebar.astro";
+import ParallaxBackground from "../../components/ParallaxBackground.astro";
+import Section from "../../components/Section.astro";
+import SectionTitle from "../../components/SectionTitle.astro";
+import Card from "../../components/Card.astro";
+import ServiceCard from "../../components/ServiceCard.astro";
+import Footer from "../../components/Footer.astro";
+import TranslationScript from "../../components/TranslationScript.astro";
+---
+
+<html lang="es">
+  <Head
+    title="Servicios de Arquitectura de Software y Cloud - Luis A. Ruiz Arias"
+    canonicalUrl="https://services.ruix.dev/"
+  />
+  <body class="antialiased">
+    <ParallaxBackground />
+    <div id="sidebar-overlay" class="md:hidden"></div>
+    <Navigation name="Luis A. Ruiz Arias" />
+    <Sidebar />
+    <main>
+      <section
+        id="hero"
+        class="hero-section container mx-auto max-w-4xl px-4 py-16 sm:py-24 text-left"
+      >
+        <div class="relative z-10">
+          <p class="hero-small-text" data-translate-key="services.hero.greeting">
+            Consultoría Técnica & Software Engineering
+          </p>
+          <h1 id="hero-main-text" class="hero-main-text">
+            Architecture & Cloud Solutions.
+          </h1>
+          <h2 class="hero-tagline" data-translate-key="services.hero.tagline">
+            Diseño y construyo arquitectura cloud escalable y rentable.
+          </h2>
+          <p class="hero-description" data-translate-key="services.hero.description">
+            Ayudo a empresas a escalar sus plataformas, reducir costos operativos en AWS y modernizar sistemas legados con arquitecturas de software de alto rendimiento basadas en microservicios, serverless y buenas prácticas de ingeniería.
+          </p>
+          <div class="mt-8">
+            <a
+              href="mailto:luisalbertoruiz.geek@gmail.com?subject=Consulta%20T%C3%A9cnica%20-%20Services"
+              class="inline-block px-8 py-3 rounded-md bg-purple-600 hover:bg-purple-700 text-white font-semibold transition-colors duration-300"
+              data-translate-key="services.hero.cta"
+            >
+              Agendar Consulta Técnica
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div class="container mx-auto max-w-5xl px-4 pb-8 sm:pb-12 relative z-10">
+        <Section id="services" paddingTop={true}>
+          <SectionTitle
+            id="services-title"
+            translateKey="services.title.services"
+            defaultText="Oferta de Servicios"
+          />
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <ServiceCard
+              titleKey="services.service1.title"
+              titleDefault="Arquitectura Cloud & Serverless en AWS"
+              descKey="services.service1.desc"
+              descDefault="Diseño e implementación de sistemas desacoplados de alta disponibilidad basados en servicios serverless (AWS SAM, Lambda, EventBridge, Aurora, Redis) optimizados para costo, seguridad y rendimiento."
+              tags={["AWS SAM", "Serverless", "EventBridge", "PostgreSQL", "Redis"]}
+            />
+            <ServiceCard
+              titleKey="services.service2.title"
+              titleDefault="Desarrollo de Software a la Medida & APIs"
+              descKey="services.service2.desc"
+              descDefault="Construcción de plataformas web y aplicaciones móviles robustas utilizando Go, TypeScript, React y React Native bajo principios de Domain-Driven Design (DDD) y Arquitectura Hexagonal."
+              tags={["Go", "TypeScript", "React", "React Native", "DDD"]}
+            />
+            <ServiceCard
+              titleKey="services.service3.title"
+              titleDefault="Auditoría, FinOps Cloud & Refactorización"
+              descKey="services.service3.desc"
+              descDefault="Análisis profundo de infraestructura AWS y código fuente para identificar cuellos de botella, eliminar deuda técnica, mejorar la disponibilidad y reducir la factura mensual en la nube."
+              tags={["AWS FinOps", "Code Audit", "Refactoring", "CI/CD"]}
+            />
+          </div>
+        </Section>
+
+        <Section id="process">
+          <SectionTitle
+            id="process-title"
+            translateKey="services.title.process"
+            defaultText="Metodología de Trabajo"
+          />
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <Card>
+              <h3 class="text-xl font-bold text-gray-100 mb-2" data-translate-key="services.step1.title">
+                1. Diagnóstico & Arquitectura
+              </h3>
+              <p class="text-gray-400" data-translate-key="services.step1.desc">
+                Evaluación de requerimientos de negocio, análisis de riesgos y definición del blueprint técnico y modelo de datos.
+              </p>
+            </Card>
+            <Card>
+              <h3 class="text-xl font-bold text-gray-100 mb-2" data-translate-key="services.step2.title">
+                2. Prueba de Concepto (PoC)
+              </h3>
+              <p class="text-gray-400" data-translate-key="services.step2.desc">
+                Validación rápida de viabilidad técnica y prototipado del core del sistema sin comprometer presupuesto.
+              </p>
+            </Card>
+            <Card>
+              <h3 class="text-xl font-bold text-gray-100 mb-2" data-translate-key="services.step3.title">
+                3. Desarrollo & Integración
+              </h3>
+              <p class="text-gray-400" data-translate-key="services.step3.desc">
+                Construcción iterativa con TDD, integración continua (CI/CD) y estándares de calidad empresariales.
+              </p>
+            </Card>
+            <Card>
+              <h3 class="text-xl font-bold text-gray-100 mb-2" data-translate-key="services.step4.title">
+                4. Despliegue & Observabilidad
+              </h3>
+              <p class="text-gray-400" data-translate-key="services.step4.desc">
+                Puesta en producción automatizada con observabilidad, alertas y métricas en tiempo real.
+              </p>
+            </Card>
+          </div>
+        </Section>
+
+        <Section id="contact" classes="mb-12 mt-12">
+          <Card classes="text-center p-8">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-100 mb-4" data-translate-key="services.title.contact">
+              ¿Tienes un reto técnico o un proyecto en mente?
+            </h2>
+            <p class="text-lg text-gray-300 mb-8" data-translate-key="services.contact.paragraph">
+              Diseñemos juntos la arquitectura adecuada para la escala y presupuesto de tu empresa.
+            </p>
+            <a
+              href="mailto:luisalbertoruiz.geek@gmail.com?subject=Consulta%20T%C3%A9cnica%20-%20Services"
+              class="inline-block px-8 py-3 rounded-md bg-purple-600 hover:bg-purple-700 text-white font-semibold transition-colors duration-300"
+              data-translate-key="services.contact.cta"
+            >
+              Agendar Consulta Técnica
+            </a>
+          </Card>
+        </Section>
+
+        <Footer />
+      </div>
+    </main>
+    <TranslationScript />
+    <script>
+      // Actualizar el título de la página según el idioma cargado
+      import { getCurrentLanguage, translations } from "../../utils/translations";
+      document.addEventListener('DOMContentLoaded', () => {
+        const lang = getCurrentLanguage();
+        if (translations[lang] && translations[lang]["services.page.title"]) {
+          document.title = translations[lang]["services.page.title"];
+        }
+      });
+    </script>
+  </body>
+</html>
