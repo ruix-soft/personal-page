@@ -128,6 +128,10 @@ export const translations: Record<Language, Record<string, string>> = {
     "tech.mongodb": "MongoDB",
     "tech.kafka": "Apache Kafka",
 
+    "footer.network_title": "Ecosistema & Red",
+    "footer.link_main": "Perfil Principal & CV",
+    "footer.link_services": "Servicios & Consultoría",
+    "footer.link_blog": "Artículos & Blog (Próximamente)",
     "footer.rights": "Todos los derechos reservados.",
     "footer.design": "Diseñado con Tailwind CSS y creado con Astro.",
     "services.page.title": "Servicios de Arquitectura de Software y Cloud - Luis A. Ruiz Arias",
@@ -285,6 +289,10 @@ export const translations: Record<Language, Record<string, string>> = {
     "tech.mongodb": "MongoDB",
     "tech.kafka": "Apache Kafka",
 
+    "footer.network_title": "Ecosystem & Network",
+    "footer.link_main": "Main Profile & CV",
+    "footer.link_services": "Services & Consulting",
+    "footer.link_blog": "Articles & Blog (Coming Soon)",
     "footer.rights": "All rights reserved.",
     "footer.design": "Designed with Tailwind CSS and built with Astro.",
     "services.page.title": "Software Architecture & Cloud Services - Luis A. Ruiz Arias",
