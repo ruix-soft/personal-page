@@ -1,5 +1,23 @@
 ---
-// No props needed for this component as it's a standard sidebar with fixed navigation links
+interface NavItem {
+  href: string;
+  translateKey: string;
+  defaultText: string;
+}
+
+interface Props {
+  navItems?: NavItem[];
+}
+
+const defaultNavItems: NavItem[] = [
+  { href: "#summary", translateKey: "nav.summary", defaultText: "<RESUMEN/>" },
+  { href: "#experience", translateKey: "nav.experience", defaultText: "<EXPERIENCIA/>" },
+  { href: "#skills", translateKey: "nav.skills", defaultText: "<HABILIDADES/>" },
+  { href: "#education", translateKey: "nav.education", defaultText: "<EDUCACIÓN/>" },
+  { href: "#languages-softskills", translateKey: "nav.languages_etc", defaultText: "<IDIOMAS_ETC/>" },
+];
+
+const { navItems = defaultNavItems } = Astro.props;
 ---
 
 <div
@@ -23,40 +41,14 @@
     </svg>
   </button>
   <ul class="mt-16 flex flex-col space-y-3">
-    <li>
-      <a
-        href="#summary"
-        class="nav-link block text-lg"
-        data-translate-key="nav.summary">{`<RESUMEN/>`}</a
-      >
-    </li>
-    <li>
-      <a
-        href="#experience"
-        class="nav-link block text-lg"
-        data-translate-key="nav.experience">{`<EXPERIENCIA/>`}</a
-      >
-    </li>
-    <li>
-      <a
-        href="#skills"
-        class="nav-link block text-lg"
-        data-translate-key="nav.skills">{`<HABILIDADES/>`}</a
-      >
-    </li>
-    <li>
-      <a
-        href="#education"
-        class="nav-link block text-lg"
-        data-translate-key="nav.education">{`<EDUCACIÓN/>`}</a
-      >
-    </li>
-    <li>
-      <a
-        href="#languages-softskills"
-        class="nav-link block text-lg"
-        data-translate-key="nav.languages_etc">{`<IDIOMAS_ETC/>`}</a
-      >
-    </li>
+    {navItems.map((item) => (
+      <li>
+        <a
+          href={item.href}
+          class="nav-link block text-lg"
+          data-translate-key={item.translateKey}>{item.defaultText}</a
+        >
+      </li>
+    ))}
   </ul>
 </div>
