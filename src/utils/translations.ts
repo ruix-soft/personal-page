@@ -161,6 +161,13 @@ export const translations: Record<Language, Record<string, string>> = {
     "services.title.contact": "¿Tienes un reto técnico o un proyecto en mente?",
     "services.contact.paragraph": "Diseñemos juntos la arquitectura adecuada para la escala y presupuesto de tu empresa.",
     "services.contact.cta": "Agendar Consulta Técnica",
+
+    "articles.page.title": "Artículos & Blog Técnico - Luis A. Ruiz Arias",
+    "articles.nav.list": "<ARTÍCULOS/>",
+    "articles.hero.greeting": "Blog & Pensamiento Técnico",
+    "articles.hero.tagline": "Lecciones sobre arquitectura cloud, escalabilidad y desarrollo.",
+    "articles.read_more": "Leer Artículo",
+    "articles.back": "← Volver a Artículos",
   },
   en: {
     "page.title":
@@ -322,6 +329,12 @@ export const translations: Record<Language, Record<string, string>> = {
     "services.title.contact": "Have a complex technical challenge or project?",
     "services.contact.paragraph": "Let's design the right architecture for your company's scale and budget.",
     "services.contact.cta": "Book Technical Consultation",
+    "articles.page.title": "Articles & Tech Blog - Luis A. Ruiz Arias",
+    "articles.nav.list": "<ARTICLES/>",
+    "articles.hero.greeting": "Blog & Tech Thoughts",
+    "articles.hero.tagline": "Lessons on cloud architecture, scalability, and development.",
+    "articles.read_more": "Read Article",
+    "articles.back": "← Back to Articles",
   },
 };
 
