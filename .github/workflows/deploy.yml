@@ -17,7 +17,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "20" # Use the Node.js version that matches your development environment
+          node-version: "24" # Use the Node.js version that matches your development environment
           cache: "npm" # Use npm if you're using npm instead of yarn
 
       - name: Install dependencies
