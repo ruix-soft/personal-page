@@ -23,9 +23,9 @@ const { titleKey, titleDefault, descKey, descDefault, tags } = Astro.props;
     <p class="text-gray-400 mb-4" data-translate-key={descKey}>
       {descDefault}
     </p>
-    <div class="flex flex-wrap gap-2">
+    <div class="flex flex-wrap gap-2 pt-4 border-t border-gray-800">
       {tags.map((tag) => (
-        <span class="tag">{tag}</span>
+        <span class="tag text-sm py-1 px-3 rounded-full">{tag}</span>
       ))}
     </div>
   </Card>
