@@ -161,3 +161,5 @@ html {
   background-clip: text;
   color: transparent;
 }
+
+@plugin "@tailwindcss/typography";
