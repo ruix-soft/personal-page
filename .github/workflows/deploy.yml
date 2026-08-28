@@ -12,10 +12,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: "24" # Use the Node.js version that matches your development environment
           cache: "npm" # Use npm if you're using npm instead of yarn
@@ -40,5 +40,5 @@ jobs:
       - name: Invalidate CloudFront distribution
         run: |
           aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
-          aws cloudfront create-invalidation --distribution-id ${{ vars.CLOUDFRONT_SERVICES_DISTRIBUTION_ID }} --paths "/*"
-          aws cloudfront create-invalidation --distribution-id ${{ vars.CLOUDFRONT_ARTICLES_DISTRIBUTION_ID }} --paths "/*"
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_SERVICES_DISTRIBUTION_ID }} --paths "/*"
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_ARTICLES_DISTRIBUTION_ID }} --paths "/*"
